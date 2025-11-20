@@ -13,4 +13,4 @@ docker run -d -p 6001:8080 --name patient-api patient-management-api:latest
 ```
 
 Then browse:
-- Swagger UI: http://localhost:8080/
+- Swagger UI: http://localhost:6001/
