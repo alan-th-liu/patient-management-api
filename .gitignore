@@ -1,0 +1,51 @@
+## Build results and object files
+##################################
+# Directories that are generally ignored in a .NET solution
+[Bb]in/
+[Oo]bj/
+**/*.pdb
+**/*.iws
+**/*.iml
+**/*.ipr
+
+# Rider/Resharper/Visual Studio specific files/folders
+#######################################################
+# Visual Studio directories
+.vs/
+
+# Resharper/Rider files (you have some of these in your status)
+.idea/
+**/.resharper
+*.DotSettings.user
+*.DotSettings
+*.user
+*.userosscache
+
+# Mac-specific files (you have this in your status)
+.DS_Store
+
+# Package management
+####################
+# Nuget packages (including global packages and caches)
+*.nupkg
+[Pp]ackages/
+!packages.config
+!/packages//*.nupkg
+.nuget/
+**/RestoreOutput/
+
+# Project-specific files that contain environment/user settings
+*.csproj.user
+*.vcxproj.user
+*.sln.docstates
+*.suo
+
+# Other temp/build files
+*.lock
+*.tmp
+*.temp
+**/.gcloud
+**/.pubxml
+**/.pubxml.user
+node_modules/
+**/dist/
