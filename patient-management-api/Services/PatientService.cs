@@ -12,11 +12,13 @@ public class PatientService(IPatientRepository patientRepository) : IPatientServ
         var patients = await _patients.GetAllWithOrderAsync();
 
         return patients.Select(p => new PatientApiResponse
-        {
-            Id = p.Patient.Id,
-            Name = p.Patient.Name,
-            OrderId = p.Patient.OrderId,
-            Message = p.Order?.Message ?? string.Empty
-        }).ToList();
+            {
+                Id = p.Patient.Id,
+                Name = p.Patient.Name,
+                OrderId = p.Patient.OrderId,
+                Message = p.Order?.Message ?? string.Empty
+            })
+            .OrderBy(p => p.Name)
+            .ToList();
     }
 }
